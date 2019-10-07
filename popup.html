@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<script src="assets/js/material.min.js"></script>
+	<script src="popup.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/material.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+		<!-- Header section -->
+		<header class="mdl-layout__header mdl-shadow--8dp">
+			<div class="mdl-layout__header-row">
+				<span id="header_title" class="mdl-layout-title">
+					<img alt="Dynamics 365 Finance & Operations" src="./images/logo_dynamics_32.png" />
+					365 Finance & Operations Dev Tools
+				</span>
+			</div>
+		</header>
+
+		<!-- Tabs -->
+		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+			<div class="mdl-tabs__tab-bar">
+				<!-- Table browser tab -->
+				<a href="#table-browser-panel" class="mdl-tabs__tab is-active">Table browser</a>
+				<!-- Class runner tab -->
+				<a href="#class-runner-panel" class="mdl-tabs__tab">Class runner</a>
+				<!-- Form tab -->
+				<a href="#form-panel" class="mdl-tabs__tab">Form</a>
+			</div>
+
+			<div class="mdl-grid">
+				<!-- Base URL -->
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+					<input class="mdl-textfield__input" type="text" id="base_url" list="base_url_list">
+					<datalist id="base_url_list">
+					</datalist>
+					<label class="mdl-textfield__label" for="base_url">Base URL</label>
+					<div class="mdl-tooltip" data-mdl-for="base_url">
+						Please enter Base URL of your Dynamics 365 Finance & Operations website.
+					</div>
+				</div>
+				<!-- Company -->
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+					<input class="mdl-textfield__input" type="text" id="company">
+					<label class="mdl-textfield__label" for="company">Company</label>
+					<div class="mdl-tooltip" data-mdl-for="company">
+						Please enter Company (legal entity) of your Dynamics 365 Finance & Operations website.
+					</div>
+				</div>
+			</div>
+
+			<!-- Table browser tab content -->
+			<div class="mdl-tabs__panel is-active" id="table-browser-panel">
+				<div class="mdl-grid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+						<label class="mdl-textfield__label" for="table_name">Table name</label>
+						<input id="table_name" class="mdl-textfield__input" name="table_name" type="text">
+						<div class="mdl-tooltip" data-mdl-for="table_name">
+							Please enter table name of your Dynamics 365 Finance & Operations website.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Class runner tab content -->
+			<div class="mdl-tabs__panel" id="class-runner-panel">
+				<div class="mdl-grid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+						<label class="mdl-textfield__label" for="class_name">Class name</label>
+						<input id="class_name" class="mdl-textfield__input" name="class_name" type="text">
+						<div class="mdl-tooltip" data-mdl-for="class_name">
+							Please enter class name to run of your Dynamics 365 Finance & Operations website.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Form tab content -->
+			<div class="mdl-tabs__panel" id="form-panel">
+				<div class="mdl-grid">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+						<label class="mdl-textfield__label" for="form_name">Form name</label>
+						<input id="form_name" class="mdl-textfield__input" name="form_name" type="text">
+						<div class="mdl-tooltip" data-mdl-for="form_name">
+							Please enter form name to run of your Dynamics 365 Finance & Operations website.
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Footer buttons -->
+			<div class="button-group">
+				<button id="open_current_tab_button"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect button-open">
+					Open in current tab
+				</button>
+				<button id="open_new_tab_button"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect button-open">
+					Open in new tab
+				</button>
+			</div>
+		</div>
+
+		<footer class="mdl-mini-footer" id="footer">
+			For suggestion/feedback/query, write to us at khanhuzaima[at]gmail[dot]com
+		</footer>
+	</div>
+
+	<div id="validation-message-box" class="mdl-js-snackbar mdl-snackbar">
+		<div class="mdl-snackbar__text"></div>
+		<button class="mdl-snackbar__action" type="button"></button>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+	"name": "Dynamics 365 Finance & Operations Dev Tools",
+	"version": "1.0",
+	"description": "Dynamics 365 Finance & Operations dev tools to open table browser, run class, or open form by their name",
+	"permissions": [
+		"storage",
+		"activeTab"
+	],
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/logo_dynamics_16.png",
+			"32": "images/logo_dynamics_32.png",
+			"48": "images/logo_dynamics_48.png",
+			"128": "images/logo_dynamics_128.png"
+		}
+	},
+	"icons": {
+		"16": "images/logo_dynamics_16.png",
+		"32": "images/logo_dynamics_32.png",
+		"48": "images/logo_dynamics_48.png",
+		"128": "images/logo_dynamics_128.png"
+	},
+	"manifest_version": 2
+}
