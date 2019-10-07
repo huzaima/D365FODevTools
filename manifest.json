@@ -1,6 +1,6 @@
 {
 	"name": "Dynamics 365 Finance & Operations Dev Tools",
-	"version": "0.0.0.1",
+	"version": "0.0.0.2",
 	"description": "Dynamics 365 Finance & Operations dev tools to open table browser, run class, or open form by their name",
 	"permissions": [
 		"storage",
