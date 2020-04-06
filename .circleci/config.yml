@@ -3,9 +3,10 @@ workflows:
   main:
     jobs:
       - build:
-          branches:
-            only:
-              - master
+          filters:
+            branches:
+              only:
+                - master
       - publish:
           requires:
             - build
