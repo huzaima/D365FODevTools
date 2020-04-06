@@ -3,19 +3,16 @@ workflows:
   main:
     jobs:
       - build:
-          filters:
-            tags:
-              only: /.*/
+          branches:
+            only:
+              - master
       - publish:
           requires:
             - build
           filters:
             branches:
-              ignore: /.*/
-            tags:
-              only: /.*/
-
-
+              only:
+                - master
 version: 2
 jobs:
   build:
@@ -24,13 +21,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Package Extension"
+          name: Package Extension
           command: git archive -o D365FODevTools.zip HEAD
       - persist_to_workspace:
           root: /root/project
           paths:
             - D365FODevTools.zip
-
   publish:
     docker:
       - image: cibuilds/chrome-extension:latest
@@ -40,5 +36,5 @@ jobs:
       - attach_workspace:
           at: /root/workspace
       - run:
-          name: "Publish"
+          name: Publish
           command: publish /root/workspace/D365FODevTools.zip
