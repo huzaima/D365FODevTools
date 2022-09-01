@@ -187,12 +187,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // attach listeners to respond on "Enter"
     document.querySelectorAll('.mdl-textfield__input').forEach((value, index, array) => {
+        value.focus();
+        document.execCommand("Paste");
         value.addEventListener("keyup", event => {
             if (event.key !== "Enter") {
                 return;
             }
-
-            document.querySelector("#open_current_tab_button").click(); // Things you want to do.
+            document.querySelector("#open_new_tab_button").click(); // Things you want to do.
             event.preventDefault(); // No need to `return false;`.
         });
     });
