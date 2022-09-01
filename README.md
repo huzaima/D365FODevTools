@@ -20,7 +20,7 @@ The extension is offered thorugh the Chrome Web Store.
 
 <div align="center">
 <a href="https://chrome.google.com/webstore/detail/dynamics-365-finance-oper/cgjlhokjempgkhjjoeohfcefhcgknfic" target="_blank">
-<img width="300px" src="https://pkmnct.github.io/robinhood-mint-sync-chrome/images/ChromeWebStore_Badge.svg" alt="Available on Chrome Web Store" />
+<img width="300px" src="https://raw.githubusercontent.com/huzaima/D365FODevTools/master/images/badge.png" alt="Available on Chrome Web Store" />
 </a>
 </div>
 
